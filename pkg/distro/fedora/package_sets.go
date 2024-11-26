@@ -368,11 +368,9 @@ func anacondaPackageSet(t *imageType) rpmmd.PackageSet {
 			"dejavu-sans-fonts",
 			"dejavu-sans-mono-fonts",
 			"device-mapper-persistent-data",
-			"dmidecode",
 			"dnf",
 			"dracut-config-generic",
 			"dracut-network",
-			"efibootmgr",
 			"ethtool",
 			"fcoe-utils",
 			"ftp",
@@ -482,6 +480,7 @@ func anacondaPackageSet(t *imageType) rpmmd.PackageSet {
 				"dmidecode",
 				"grub2-tools-efi",
 				"memtest86+",
+				"efibootmgr",
 			},
 		})
 
@@ -489,6 +488,7 @@ func anacondaPackageSet(t *imageType) rpmmd.PackageSet {
 		ps = ps.Append(rpmmd.PackageSet{
 			Include: []string{
 				"dmidecode",
+				"efibootmgr",
 			},
 		})
 

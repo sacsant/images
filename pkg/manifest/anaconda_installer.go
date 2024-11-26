@@ -121,7 +121,6 @@ func (p *AnacondaInstaller) anacondaBootPackageSet() []string {
 		"grub2-tools",
 		"grub2-tools-extra",
 		"grub2-tools-minimal",
-		"efibootmgr",
 	}
 
 	switch p.platform.GetArch() {
@@ -131,6 +130,7 @@ func (p *AnacondaInstaller) anacondaBootPackageSet() []string {
 			"grub2-efi-x64-cdboot",
 			"grub2-pc",
 			"grub2-pc-modules",
+			"efibootmgr",
 			"shim-x64",
 			"syslinux",
 			"syslinux-nonlinux",
@@ -139,6 +139,7 @@ func (p *AnacondaInstaller) anacondaBootPackageSet() []string {
 		packages = append(packages,
 			"grub2-efi-aa64-cdboot",
 			"grub2-efi-aa64",
+			"efibootmgr",
 			"shim-aa64",
 		)
 	case arch.ARCH_PPC64LE:

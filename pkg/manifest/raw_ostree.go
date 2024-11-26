@@ -45,7 +45,8 @@ func (p *RawOSTreeImage) getBuildPackages(Distro) []string {
 
 		// these should be defined on the platform
 		"dracut-config-generic",
-		"efibootmgr",
+                // For now comment it, not required for ppc64le
+		// "efibootmgr",
 	)
 	return packages
 }
